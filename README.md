@@ -5,7 +5,7 @@ Home: http://eclipse.org/paho
 
 Package license: EPL (Eclipse) v1.0 / EDP (Eclipse Distribution L...) v1.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: MQTT version 3.1.1 client class
 
