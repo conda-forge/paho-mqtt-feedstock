@@ -1,5 +1,5 @@
 {% set name = "paho-mqtt" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9feb068e822be7b3a116324e01fb6028eb1d66412bf98595ae72698965cb1cae
+  sha256: 4b34b07ee45925ecbdddecc862ff68d9a9999d78d8876e23f8f54985dd9ed5d1
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} setup.py install --old-and-unmanageable
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
