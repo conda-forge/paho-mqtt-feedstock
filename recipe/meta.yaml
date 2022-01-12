@@ -34,7 +34,7 @@ test:
 
 about:
   home: http://eclipse.org/paho
-  license: EPL-2.0 OR BSD-3-Clause
+  license: EPL-2.0 AND BSD-3-Clause
   license_family: OTHER
   license_file: LICENSE.txt
   summary: MQTT version 3.1.1 client class
