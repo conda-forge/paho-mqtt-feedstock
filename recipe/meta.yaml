@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -34,7 +34,7 @@ test:
 
 about:
   home: http://eclipse.org/paho
-  license: EPL (Eclipse) v1.0 / EDP (Eclipse Distribution L...) v1.0
+  license: EPL-2.0 OR BSD-3-Clause
   license_family: OTHER
   license_file: LICENSE.txt
   summary: MQTT version 3.1.1 client class
