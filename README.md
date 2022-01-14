@@ -3,7 +3,7 @@ About paho-mqtt
 
 Home: http://eclipse.org/paho
 
-Package license: EPL (Eclipse) v1.0 / EDP (Eclipse Distribution L...) v1.0
+Package license: EPL-2.0 AND BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/paho-mqtt-feedstock/blob/master/LICENSE.txt)
 
