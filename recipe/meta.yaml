@@ -1,5 +1,5 @@
 {% set name = "paho-mqtt" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b34b07ee45925ecbdddecc862ff68d9a9999d78d8876e23f8f54985dd9ed5d1
+  sha256: 2a8291c81623aec00372b5a85558a372c747cbca8e9934dfe218638b8eefc26f
 
 build:
   number: 0
