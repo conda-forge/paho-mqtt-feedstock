@@ -7,20 +7,20 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2a8291c81623aec00372b5a85558a372c747cbca8e9934dfe218638b8eefc26f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} setup.py install --old-and-unmanageable
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +31,7 @@ test:
     - pylama
     - pytest
     - six
+    - python {{ python_min }}
 
 about:
   home: http://eclipse.org/paho
