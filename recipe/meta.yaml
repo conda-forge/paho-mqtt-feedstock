@@ -7,7 +7,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 12d6e7511d4137555a3f6ea167ae846af2c7357b10bc6fa4f7c3968fc1723834
 
 build:
@@ -17,16 +17,18 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - hatchling
   run:
-    - python >=3.7
+    - python >={{ python_min }}
 
 test:
   imports:
     - paho
     - paho.mqtt
     - paho.mqtt.client
+  requires:
+    - python {{ python_min }}
 
 about:
   home: http://eclipse.org/paho
