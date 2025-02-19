@@ -1,5 +1,5 @@
 {% set name = "paho-mqtt" %}
-{% set version = "1.6.1" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2a8291c81623aec00372b5a85558a372c747cbca8e9934dfe218638b8eefc26f
+  sha256: 12d6e7511d4137555a3f6ea167ae846af2c7357b10bc6fa4f7c3968fc1723834
 
 build:
   number: 0
@@ -17,20 +17,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6
-    - setuptools
+    - python >=3.7
+    - hatchling
   run:
-    - python >=3.6
+    - python >=3.7
 
 test:
   imports:
     - paho
     - paho.mqtt
-  requires:
-    - mock
-    - pylama
-    - pytest
-    - six
+    - paho.mqtt.client
 
 about:
   home: http://eclipse.org/paho
